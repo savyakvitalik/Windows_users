@@ -7,7 +7,8 @@ CHARS = 'abcdefghijklnop1234567qrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abc
 password = ""
 wb = openpyxl.load_workbook('exel.xlsx')
 wb1 = openpyxl.Workbook()
-
+if (os.path.exists("Passwaord.xlsx")):
+    os.remove("Password.xlsx")
 wb1.create_sheet(title = 'Password', index = 0)
 
 sheet_users = wb['Users']
@@ -60,4 +61,4 @@ if (os.path.exists("Passwaord.xlsx")):
     
 wb1.save('Password.xlsx')
 
-exit()
+exit = input()
