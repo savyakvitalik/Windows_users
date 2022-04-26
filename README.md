@@ -3,7 +3,6 @@ Function of this program:
   - creating groups and users
   - generating password for users and write passwords on file .exel
   - adding users to groups
-
 About program
   Creating users:
   ![1](https://user-images.githubusercontent.com/99117012/165301185-c0d1c2de-f59d-4903-b001-986a7767dd59.png)
