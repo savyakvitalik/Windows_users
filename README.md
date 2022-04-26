@@ -4,11 +4,16 @@ Function of this program:
   - generating password for users and write passwords on file .exel
   - adding users to groups
 About program
+
   Creating users:
+  
   ![1](https://user-images.githubusercontent.com/99117012/165301185-c0d1c2de-f59d-4903-b001-986a7767dd59.png)
   Users - The name of user
+  
   Full name - Full name user
+  
   Description - The Description of user
+  
   Add group - Groups to add to user (Warning!!! You need to specify groups through the sign ",", otherwise it will not work)
   
   Creating groups:
