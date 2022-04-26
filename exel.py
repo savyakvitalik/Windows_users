@@ -1,6 +1,7 @@
 import openpyxl
 import os
 import random
+import subprocess
 
 #Gets Windows language
 output = subprocess.check_output(['powershell.exe' ,"[CultureInfo]::InstalleduICulture.Name"], universal_newlines=True)
@@ -42,12 +43,13 @@ for i in range(2, rows_1 + 2):
     os.system(f"net localgroup \"{group_name}\" /add")
     os.system(f"net localgroup \"{group_name}\" /comment:\"{description_group}\"")
 
-#Generating password
-for k in range(1, chars_password):
-            password += random.choice(CHARS)
 
 #Creating users and addind groups
 for n in range(2,rows_2 + 2):
+    #Generating password
+    for k in range(1, chars_password):
+            password += random.choice(CHARS)
+
     for m in range(1, cols_2 + 1):
         if(m == 1):
             user_name = sheet_users.cell(row = n,column = m).value
@@ -76,8 +78,10 @@ for n in range(2,rows_2 + 2):
                     os.system(f"net localgroup \"{remote_group}\" \"{user_name}\" /add")
             else:
                 pass
+    password = ""   
 
-password = ""   
+
+  
 if (os.path.exists("Passwaord.xlsx")):
     os.remove("Password.xlsx")
     
